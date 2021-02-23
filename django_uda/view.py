@@ -6,6 +6,8 @@
 """
 import json
 import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 from django.views.decorators.csrf import csrf_exempt
 
@@ -14,14 +16,16 @@ sys.path.append('../cffex_uda/augmentation')
 sys.path.append('../cffex_uda/albert')
 sys.path.append('../cffex_uda/utils')
 
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from cffex_uda import  get_uda
 from cffex_uda.utils import tokenization, raw_data_utils
-from  conf import *
+from conf import *
 
 tokenizer = tokenization.FullTokenizer(vocab_file=conf['vocab_file'], do_lower_case=True)
 processor = raw_data_utils.CFFEXProcessor(conf["labels"])
+# processor = raw_data_utils.CFFEXIllegalProcessor(conf["labels"])
 uda = get_uda.Get_UDA(conf, tokenizer, processor)
+dic = {0:"未涉嫌违规", 1:"非法投资咨询", 2:"非法诱导投资", 3:"非法经营活动", 4:"维权追损二次诈骗"}
 
 # 心跳包
 def test(request):
@@ -29,18 +33,17 @@ def test(request):
     return JsonResponse({"status": 200, "message": "connect success"}, safe=False)
 
 @csrf_exempt
-def predict(request):
+def get_illegal_type(request):
     request.encoding = 'utf-8'
     if request.method != "POST":
         return JsonResponse({"status":405,"message":"Only POST supported"},safe=False)
     else:
-        print("content:")
         content = json.loads(request.body)['content']
-        print(content)
+        # print("content:", content)
     if content:
         # str = '股指期货就像孙悟空。人跟神，不能做亲密的小伙伴，实在不好愉快的玩耍。'
         p = uda.predict(content)
-        print(p)
+        # print(p)
         # print(str)
         # print(type(str))
         # print(content)
@@ -52,6 +55,9 @@ def predict(request):
             if(p['probabilities'][i] > max):
                 max = p['probabilities'][i]
                 label = labels[i]
-        print(label)
-        result = {"probabilities": list(p['probabilities']), "label": label}
-        return JsonResponse({"status": 200, "message": "OK",  "result": "{}".format(result)}, safe=False)
+        result = {'status':200, 'message':'OK', 'result':{"category": '{}'.format(dic[label]),"weight": "{}".format(max)}}
+        final_result = [result]
+    return JsonResponse(final_result, safe=False)
+
+
+

@@ -17,15 +17,33 @@ FILE=CFFEX
 MAX_SEQ_LENGTH=256
 SUP_SIZE=-1
 SUB_FILE=multitags/data_tag_0
+#SUP_TRAIN_FILE="train_0.8.csv"
+#SUP_DEV_FILE="eval_0.2.csv"
+#LABELS="物流","公告速递","财经早报","非银金融","建筑材料","宏观政策","A股IPO动态","医药","机械设备","纺织服装","A股入摩进展","比特币","none"
+#
+#SUB_FILE=multitags/data_tag_1
+#SUP_TRAIN_FILE="train_0.8.csv"
+#SUP_DEV_FILE="eval_0.2.csv"
+#LABELS="财经早餐","A股策略","中国央行动态","电力","贸易","化工","快递物流","智能制造","原油","none"
+#
+#SUB_FILE=multitags/data_tag_2
+#SUP_TRAIN_FILE="train_0.8.csv"
+#SUP_DEV_FILE="eval_0.2.csv"
+#LABELS="研判优选","物联网","轻工制造","严重事故","民企","午盘点评","口罩","投融资","none"
+#
+#SUB_FILE=multitags/data_tag_3
+#SUP_TRAIN_FILE="train_0.8.csv"
+#SUP_DEV_FILE="eval_0.2.csv"
+#LABELS="电子","工业互联网","焦点评论","商务部","none"
+#
+SUB_FILE=multitags/data_tag_4
 SUP_TRAIN_FILE="train_0.8.csv"
 SUP_DEV_FILE="eval_0.2.csv"
-LABELS="物流","公告速递","财经早报","非银金融","建筑材料","宏观政策","A股IPO动态","医药","机械设备","纺织服装","A股入摩进展","比特币","none"
-
-
+LABELS="时政要闻","农产品","工信部","none"
 
 python cffex_uda/main.py \
   --use_tpu=False \
-  --do_train=False  \
+  --do_train=True  \
   --do_eval=True \
   --labels=${LABELS}\
   --raw_data_dir=cffex_uda/data/$FILE/$SUB_FILE \

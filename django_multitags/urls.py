@@ -18,5 +18,5 @@ from . import view
 
 urlpatterns = [
     url(r'^test/$', view.test),
-    url(r'^get_illegal_type/$', view.get_illegal_type)
+    url(r'^get_multitags/$', view.get_multitags)
 ]
