@@ -5,12 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28940aba-878b-4da2-bca3-c4a8986f24e7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manage_multitags.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_uda/urls.py" afterPath="$PROJECT_DIR$/django_uda/urls.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/albert/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/albert/lamb_optimizer.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/albert/modeling.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/albert/optimization.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/augmentation/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/augmentation/sent_level_augment.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/augmentation/word_level_augment.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/bert/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/bert/modeling.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/bert/multi_gpu_optimizer.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/bert/optimization.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/bert_lstm_uda.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/extract_raw_text.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/get_uda.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/main.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/preprocess.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/pretrained_models/albert_base/albert_config.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/pretrained_models/albert_base/checkpoint" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/pretrained_models/albert_base/model.ckpt-best.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/pretrained_models/albert_base/model.ckpt-best.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/pretrained_models/albert_base/model.ckpt-best.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/pretrained_models/albert_base/vocab_chinese.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/uda.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/utils/THUCNews_format.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/utils/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/utils/imdb_format.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/utils/keyword_extraction.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/utils/proc_data_utils.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/utils/raw_data_utils.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/utils/tokenization.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cffex_uda/utils/tpu_utils.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_multitags/conf.py" afterPath="$PROJECT_DIR$/django_multitags/conf.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_multitags/test.py" afterPath="$PROJECT_DIR$/django_multitags/test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_multitags/view.py" afterPath="$PROJECT_DIR$/django_multitags/view.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_uda/conf.py" afterPath="$PROJECT_DIR$/django_uda/conf.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_uda/test.py" afterPath="$PROJECT_DIR$/django_uda/test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_uda/view.py" afterPath="$PROJECT_DIR$/django_uda/view.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/http_test.py" afterPath="$PROJECT_DIR$/http_test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/run_base.sh" afterPath="$PROJECT_DIR$/scripts/run_base.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/csv_process.py" afterPath="$PROJECT_DIR$/utils/csv_process.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,12 +79,48 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="view.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_multitags/view.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
               <caret line="83" column="33" lean-forward="false" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="33" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ssf_uda/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="33" column="19" lean-forward="false" selection-start-line="388" selection-start-column="26" selection-end-line="388" selection-end-column="35" />
+              <folding>
+                <element signature="e#645#683#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="get_uda.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ssf_uda/get_uda.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1042">
+              <caret line="104" column="47" lean-forward="false" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
+              <folding>
+                <element signature="e#645#683#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/django_multitags/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding>
+                <element signature="e#644#676#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -67,10 +138,10 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_multitags/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
+            <state relative-caret-position="900">
               <caret line="60" column="70" lean-forward="false" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="70" />
               <folding>
-                <element signature="e#15#45#0" expanded="true" />
+                <element signature="e#15#43#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -170,6 +241,7 @@
         <option value="$PROJECT_DIR$/django_uda/view.py" />
         <option value="$PROJECT_DIR$/http_test.py" />
         <option value="$PROJECT_DIR$/django_multitags/view.py" />
+        <option value="$PROJECT_DIR$/ssf_uda/get_uda.py" />
       </list>
     </option>
   </component>
@@ -238,87 +310,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="ssf_uda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="text" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="text" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="django_multitags" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="text" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="text" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cffex_uda" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="text" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="text" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cffex_uda" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CFFEX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="text" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="text" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cffex_uda" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CFFEX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="multitags" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="text" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="text" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cffex_uda" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ckpt" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -651,17 +657,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="728" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2714055" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15081967" sideWeight="0.50646204" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15081967" sideWeight="0.49353796" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27544427" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -669,10 +676,8 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15081967" sideWeight="0.49353796" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30210015" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -755,21 +760,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cffex_uda/albert/modeling.py">
+    <entry file="file://$PROJECT_DIR$/ssf_uda/albert/modeling.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3435">
           <caret line="243" column="31" lean-forward="false" selection-start-line="243" selection-start-column="31" selection-end-line="243" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cffex_uda/bert_lstm_uda.py">
+    <entry file="file://$PROJECT_DIR$/ssf_uda/bert_lstm_uda.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1875">
           <caret line="136" column="35" lean-forward="false" selection-start-line="136" selection-start-column="35" selection-end-line="136" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cffex_uda/utils/proc_data_utils.py">
+    <entry file="file://$PROJECT_DIR$/ssf_uda/utils/proc_data_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1560">
           <caret line="117" column="40" lean-forward="false" selection-start-line="117" selection-start-column="22" selection-end-line="117" selection-end-column="40" />
@@ -783,21 +788,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cffex_uda/data/CFFEX/theme3/train_0.8.csv">
+    <entry file="file://$PROJECT_DIR$/ssf_uda/data/CFFEX/theme3/train_0.8.csv">
       <provider selected="true" editor-type-id="LargeFileEditor">
         <state relative-caret-position="-77747">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cffex_uda/data/CFFEX/theme3/eval_0.2.csv">
+    <entry file="file://$PROJECT_DIR$/ssf_uda/data/CFFEX/theme3/eval_0.2.csv">
       <provider selected="true" editor-type-id="LargeFileEditor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cffex_uda/data/CFFEX/theme5/eval_0.2.csv">
+    <entry file="file://$PROJECT_DIR$/ssf_uda/data/CFFEX/theme5/eval_0.2.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
@@ -807,7 +812,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cffex_uda/data/CFFEX/theme5/train_0.8.csv">
+    <entry file="file://$PROJECT_DIR$/ssf_uda/data/CFFEX/theme5/train_0.8.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
@@ -817,14 +822,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cffex_uda/utils/keyword_extraction.py">
+    <entry file="file://$PROJECT_DIR$/ssf_uda/utils/keyword_extraction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="33" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="13" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cffex_uda/data/CFFEX/illegal/违规类别.csv">
+    <entry file="file://$PROJECT_DIR$/ssf_uda/data/CFFEX/illegal/违规类别.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
@@ -835,28 +840,28 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cffex_uda/utils/csv_process.py" />
-    <entry file="file://$PROJECT_DIR$/cffex_uda/albert/optimization.py">
+    <entry file="file://$PROJECT_DIR$/ssf_uda/albert/optimization.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="71" column="80" lean-forward="true" selection-start-line="71" selection-start-column="80" selection-end-line="71" selection-end-column="80" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cffex_uda/extract_raw_text.py">
+    <entry file="file://$PROJECT_DIR$/ssf_uda/extract_raw_text.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-824">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cffex_uda/augmentation/word_level_augment.py">
+    <entry file="file://$PROJECT_DIR$/ssf_uda/augmentation/word_level_augment.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
           <caret line="234" column="11" lean-forward="false" selection-start-line="234" selection-start-column="6" selection-end-line="234" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cffex_uda/data/CFFEX/illegal/train.csv">
+    <entry file="file://$PROJECT_DIR$/ssf_uda/data/CFFEX/illegal/train.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
@@ -866,14 +871,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cffex_uda/utils/raw_data_utils.py">
+    <entry file="file://$PROJECT_DIR$/ssf_uda/utils/raw_data_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6810">
           <caret line="464" column="28" lean-forward="false" selection-start-line="464" selection-start-column="28" selection-end-line="464" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cffex_uda/uda.py">
+    <entry file="file://$PROJECT_DIR$/ssf_uda/uda.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="429" column="41" lean-forward="true" selection-start-line="429" selection-start-column="41" selection-end-line="429" selection-end-column="41" />
@@ -884,20 +889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
           <caret line="617" column="11" lean-forward="false" selection-start-line="617" selection-start-column="10" selection-end-line="617" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cffex_uda/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5640">
-          <caret line="388" column="35" lean-forward="false" selection-start-line="388" selection-start-column="26" selection-end-line="388" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cffex_uda/get_uda.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1395">
-          <caret line="104" column="47" lean-forward="false" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -929,7 +920,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cffex_uda/preprocess.py">
+    <entry file="file://$PROJECT_DIR$/ssf_uda/preprocess.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2243">
           <caret line="502" column="22" lean-forward="false" selection-start-line="502" selection-start-column="22" selection-end-line="502" selection-end-column="22" />
@@ -987,13 +978,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_multitags/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django_multitags/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1047,7 +1031,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cffex_uda/data/CFFEX/multitags/multitags_uda.csv">
+    <entry file="file://$PROJECT_DIR$/ssf_uda/data/CFFEX/multitags/multitags_uda.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="410">
           <caret line="114" column="202" lean-forward="false" selection-start-line="114" selection-start-column="202" selection-end-line="114" selection-end-column="203" />
@@ -1062,21 +1046,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_multitags/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="60" column="70" lean-forward="false" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="70" />
-          <folding>
-            <element signature="e#15#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django_multitags/view.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="83" column="33" lean-forward="false" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_multitags/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#644#676#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_multitags/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="60" column="70" lean-forward="false" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="70" />
+          <folding>
+            <element signature="e#15#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssf_uda/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="33" column="19" lean-forward="false" selection-start-line="388" selection-start-column="26" selection-end-line="388" selection-end-column="35" />
+          <folding>
+            <element signature="e#645#683#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssf_uda/get_uda.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1042">
+          <caret line="104" column="47" lean-forward="false" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
+          <folding>
+            <element signature="e#645#683#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

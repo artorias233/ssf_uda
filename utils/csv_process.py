@@ -5,8 +5,8 @@ import numpy as np
 import csv
 import pandas as pd
 import os, json
-from cffex_uda.utils import tokenization, raw_data_utils
-from cffex_uda import get_uda
+from ssf_uda.utils import tokenization, raw_data_utils
+from ssf_uda import get_uda
 import tensorflow as tf
 import jieba
 import json
@@ -67,7 +67,7 @@ flags.DEFINE_integer(
 
 
 
-FILE_PATH_BASE = 'cffex_uda/data/CFFEX/theme3'
+FILE_PATH_BASE = 'ssf_uda/data/CFFEX/theme3'
 
 conf = {
 "labels":FLAGS.labels,
@@ -78,9 +78,9 @@ conf = {
 "tsa": "linear_schedule",
 "uda_softmax_temp": -1,
 "uda_confidence_thresh": -1,
-"vocab_file": "cffex_uda/pretrained_models/albert_base/vocab_chinese.txt",
-"init_checkpoint": "cffex_uda/pretrained_models/albert_base/model.ckpt-best",
-'bert_config_file':'cffex_uda/pretrained_models/albert_base/albert_config.json',
+"vocab_file": "ssf_uda/pretrained_models/albert_base/vocab_chinese.txt",
+"init_checkpoint": "ssf_uda/pretrained_models/albert_base/model.ckpt-best",
+'bert_config_file':'ssf_uda/pretrained_models/albert_base/albert_config.json',
 "model_dir": FLAGS.model_dir,
 "use_one_hot_embeddings": True,
 "max_seq_length": FLAGS.max_seq_len,
@@ -370,7 +370,7 @@ def csv_multi_tag_process(data):
                     data_tag_all[i] = data_tag_all[i].append(
                         [{'content': content,'label': "none"}], ignore_index=True)
     for i in range(len(data_tag_all)):
-        to_csv(data_tag_all[i],'cffex_uda/data/CFFEX/multitags', 'data_tag_{}.csv'.format(i))
+        to_csv(data_tag_all[i],'ssf_uda/data/CFFEX/multitags', 'data_tag_{}.csv'.format(i))
 
 def split_multi_tags(tag_list):
     tag_map = {}
@@ -454,7 +454,7 @@ def get_data_by_size_lim(train_examples, sup_size):
     return new_train_examples
 
 def eval_illegal():
-    eval = read_csv('cffex_uda/data/CFFEX/illegal', 'eval_0.2.csv')
+    eval = read_csv('ssf_uda/data/CFFEX/illegal', 'eval_0.2.csv')
     for i in range(len(eval)):
         label_dict = ["未涉嫌违规", "非法投资咨询", "非法诱导投资", "非法经营活动", "维权追损二次诈骗"]
         content = eval.iloc[i]["content"]
@@ -497,7 +497,7 @@ def print_list(l):
     print(str(l).decode("string_escape"))
 
 def eval_multi_tags():
-    eval = read_csv('cffex_uda/data/CFFEX/multitags', 'eval.csv');
+    eval = read_csv('ssf_uda/data/CFFEX/multitags', 'eval.csv');
     for i in range(len(eval)):
         content = eval.iloc[i]['content']
         labels = re.findall(r"'(.*?)'",eval.iloc[i]['uda_codes'])
@@ -507,10 +507,10 @@ def eval_multi_tags():
 def main(_):
 
     # for i in range(5):
-    #     data  = read_csv('cffex_uda/data/CFFEX/multitags/data_tag_{}'.format(i), 'data_tag_{}.csv'.format(i))
+    #     data  = read_csv('ssf_uda/data/CFFEX/multitags/data_tag_{}'.format(i), 'data_tag_{}.csv'.format(i))
     #     train, eval = split_set_by_ratio(data,0.8)
-    #     to_csv(train,'cffex_uda/data/CFFEX/multitags/data_tag_{}'.format(i), 'train_0.8.csv')
-    #     to_csv(eval, 'cffex_uda/data/CFFEX/multitags/data_tag_{}'.format(i), 'eval_0.2.csv')
+    #     to_csv(train,'ssf_uda/data/CFFEX/multitags/data_tag_{}'.format(i), 'train_0.8.csv')
+    #     to_csv(eval, 'ssf_uda/data/CFFEX/multitags/data_tag_{}'.format(i), 'eval_0.2.csv')
     # print(len(data))
     # tag_list = []
     # # print(str(tag_list).decode("string_escape"))
@@ -518,7 +518,7 @@ def main(_):
     # #     print(tag)
     # tag_set = split_multi_tags(tag_list)
     # print(str(tag_set).decode("string_escape"))
-    # train = read_csv('cffex_uda/data/CFFEX/illegal', 'train_0.8.csv')
+    # train = read_csv('ssf_uda/data/CFFEX/illegal', 'train_0.8.csv')
     # show_info(train)
 
     # for t in range(0, 30):
@@ -533,7 +533,7 @@ def main(_):
     # cnt = 0
 
     # print(1.0 * cnt / len(eval))
-    # eval = read_csv('cffex_uda/data/CFFEX/illegal', 'eval_0.2.csv')
+    # eval = read_csv('ssf_uda/data/CFFEX/illegal', 'eval_0.2.csv')
     #     label = train.iloc[i]['label']
     #     if not label_keyword_map.has_key(label):
     #         label_keyword_map[label] = []
@@ -544,23 +544,23 @@ def main(_):
     # for i in range(1,5):
     #     print(str(label_keyword_map[i]).decode("unicode_escape"))
     # train = dataframe_keyword_extraction(train)
-    # to_csv(train, 'cffex_uda/data/CFFEX/illegal', 'train_extraction_0.8.csv')
-    # unsup = read_csv('cffex_uda/data/CFFEX/illegal', 'unsup.csv')
+    # to_csv(train, 'ssf_uda/data/CFFEX/illegal', 'train_extraction_0.8.csv')
+    # unsup = read_csv('ssf_uda/data/CFFEX/illegal', 'unsup.csv')
     # unsup['label'] = 'unsup'
-    # to_csv(unsup, 'cffex_uda/data/CFFEX/illegal', 'unsup.csv')
-    # eval = read_csv('cffex_uda/data/CFFEX/illegal', 'eval_0.2.csv')
+    # to_csv(unsup, 'ssf_uda/data/CFFEX/illegal', 'unsup.csv')
+    # eval = read_csv('ssf_uda/data/CFFEX/illegal', 'eval_0.2.csv')
     # eval = dataframe_keyword_extraction(eval)
-    # to_csv(eval, 'cffex_uda/data/CFFEX/illegal', 'eval_extraction_0.2.csv')
+    # to_csv(eval, 'ssf_uda/data/CFFEX/illegal', 'eval_extraction_0.2.csv')
     # eval = dataframe_keyword_extraction(eval)
     # unsup = dataframe_keyword_extraction(unsup)
-    # to_csv(unsup, 'cffex_uda/data/CFFEX/illegal', 'unsup_extration.csv')
+    # to_csv(unsup, 'ssf_uda/data/CFFEX/illegal', 'unsup_extration.csv')
     # unsup.insert(1,'label','unsup')
 
     # labels = ['unsup']*len(unsup)
     # unsup['label'] = labels
     # print(unsup.head())
-    # to_csv(unsup,'cffex_uda/data/CFFEX/illegal', 'unsup.csv')
-    # train_data = read_csv('cffex_uda/data/CFFEX/illegal', 'unsup.csv')
+    # to_csv(unsup,'ssf_uda/data/CFFEX/illegal', 'unsup.csv')
+    # train_data = read_csv('ssf_uda/data/CFFEX/illegal', 'unsup.csv')
     # # train_data.drop(['text_split','emb_list'],axis=1,inplace=True)
     # show_info(train_data)
     # label_index = train_data.columns.get_loc('content')
@@ -571,11 +571,11 @@ def main(_):
     #     train_data.iloc[i,label_index] = content
     #     # print(train_data.iloc[i]['content'])
     # show_info(train_data)
-    # to_csv(train_data,'cffex_uda/data/CFFEX/illegal','unsup.csv')
-    # to_csv(train_data,'cffex_uda/data/CFFEX/illegal',"train_extraction_0.8.csv")
+    # to_csv(train_data,'ssf_uda/data/CFFEX/illegal','unsup.csv')
+    # to_csv(train_data,'ssf_uda/data/CFFEX/illegal',"train_extraction_0.8.csv")
 
-    # eval = read_csv('cffex_uda/data/CFFEX/theme3', 'eval_0.2.csv')
-    # unsup = read_csv('cffex_uda/data/CFFEX/illegal', 'unsup.csv')
+    # eval = read_csv('ssf_uda/data/CFFEX/theme3', 'eval_0.2.csv')
+    # unsup = read_csv('ssf_uda/data/CFFEX/illegal', 'unsup.csv')
     # show_info(train_data)
     # show_info(eval)
     # show_info(unsup)

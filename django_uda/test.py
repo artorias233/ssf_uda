@@ -1,6 +1,6 @@
 # coding=utf-8
-from cffex_uda import  get_uda
-from cffex_uda.utils import tokenization, raw_data_utils
+from ssf_uda import  get_uda
+from ssf_uda.utils import tokenization, raw_data_utils
 from  conf import *
 import pandas as pd
 import json
@@ -32,7 +32,7 @@ def illegal_eval_uda():
     processor = raw_data_utils.CFFEXProcessor(conf["labels"])
     uda = get_uda.Get_UDA(conf, tokenizer, processor)
 
-    eval_data = read_csv('cffex_uda/data/CFFEX/illegal', 'eval_0.2.csv')
+    eval_data = read_csv('ssf_uda/data/CFFEX/illegal', 'eval_0.2.csv')
 
     check_data = pd.DataFrame(columns=('content', 'label', 'predict'))
 
@@ -67,7 +67,7 @@ def illegal_eval_uda():
         print("ori:{}\tpredict:{}".format(w[1], w[2]))
     pcsion = TP / (TP + FP)
     recall = TP / (TP + FN)
-    to_csv(check_data, 'cffex_uda/data/CFFEX/illegal', 'illegal_uda.csv')
+    to_csv(check_data, 'ssf_uda/data/CFFEX/illegal', 'illegal_uda.csv')
     print("误识别为违规言论条数：{}".format(len(false_examples)))
     print("违规言论精确率：{}, 召回率：{}".format(pcsion, recall))
 
@@ -76,15 +76,15 @@ def illegal_eval_uda():
     uda.kill()
 
 def restore():
-    eval = read_csv('cffex_uda/data/CFFEX/multitags', 'eval_uda_predict.csv')
+    eval = read_csv('ssf_uda/data/CFFEX/multitags', 'eval_uda_predict.csv')
     eval['uda_predict'] = "[]"
-    to_csv(eval, 'cffex_uda/data/CFFEX/multitags', 'eval_uda_predict.csv')
+    to_csv(eval, 'ssf_uda/data/CFFEX/multitags', 'eval_uda_predict.csv')
 
 def multitags_eval():
     # tokenizer = tokenization.FullTokenizer(vocab_file=conf['vocab_file'], do_lower_case=True)
     # processor = raw_data_utils.CFFEXProcessor(conf["labels"])
     # uda = get_uda.Get_UDA(conf, tokenizer, processor)
-    eval = read_csv('cffex_uda/data/CFFEX/multitags', 'eval_uda_predict.csv')
+    eval = read_csv('ssf_uda/data/CFFEX/multitags', 'eval_uda_predict.csv')
     label_index = eval.columns.get_loc('uda_predict')
     for i in range(len(eval)):
         content = eval.iloc[i]['content']
@@ -102,11 +102,11 @@ def multitags_eval():
     #         eval.iloc[i,label_index] = json.dumps(labels_uda,ensure_ascii=False)
     #     print_list(labels_ori)
     #     print(json.dumps(labels_uda,ensure_ascii=False))
-    # to_csv(eval, 'cffex_uda/data/CFFEX/multitags', 'eval_uda_predict.csv')
+    # to_csv(eval, 'ssf_uda/data/CFFEX/multitags', 'eval_uda_predict.csv')
     # uda.kill()
 
 def multi_tags_acc():
-    eval = read_csv('cffex_uda/data/CFFEX/multitags', 'eval_uda_predict.csv')
+    eval = read_csv('ssf_uda/data/CFFEX/multitags', 'eval_uda_predict.csv')
     check_data = pd.DataFrame(columns=('content', 'label', 'predict'))
 
     cnt = 0
@@ -122,7 +122,7 @@ def multi_tags_acc():
             print ("ori: {}\npredict:{}".format(str(labels_ori).decode("string_escape"), str(labels_uda).decode("string_escape")))
         else:
             cnt += 1
-    to_csv(check_data, 'cffex_uda/data/CFFEX/multitags', 'multitags_uda.csv')
+    to_csv(check_data, 'ssf_uda/data/CFFEX/multitags', 'multitags_uda.csv')
     print ("acc: {}".format(cnt*1.0/len(eval)))
 
 def eval_illegal_re():
@@ -132,7 +132,7 @@ def eval_illegal_re():
         cnt = 0.0
         ep = 1e-7
         t = 2
-        eval = read_csv('cffex_uda/data/CFFEX/illegal', 'eval_0.2.csv')
+        eval = read_csv('ssf_uda/data/CFFEX/illegal', 'eval_0.2.csv')
         for i in range(len(eval)):
             label_dict = ["未涉嫌违规", "非法投资咨询", "非法诱导投资", "非法经营活动", "维权追损二次诈骗"]
             content = eval.iloc[i]["content"]

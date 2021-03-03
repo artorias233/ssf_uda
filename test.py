@@ -24,9 +24,9 @@ import time
 import tensorflow as tf
 from queue import Queue
 
-from cffex_uda import uda, preprocess
-from cffex_uda.albert import modeling
-from cffex_uda.utils import raw_data_utils, tokenization
+from ssf_uda import uda, preprocess
+from ssf_uda.albert import modeling
+from ssf_uda.utils import raw_data_utils, tokenization
 from django_uda.conf import *
 
 

@@ -11,14 +11,14 @@ sys.setdefaultencoding('utf8')
 
 from django.views.decorators.csrf import csrf_exempt
 
-sys.path.append('../cffex_uda')
-sys.path.append('../cffex_uda/augmentation')
-sys.path.append('../cffex_uda/albert')
-sys.path.append('../cffex_uda/utils')
+sys.path.append('../ssf_uda')
+sys.path.append('../ssf_uda/augmentation')
+sys.path.append('../ssf_uda/albert')
+sys.path.append('../ssf_uda/utils')
 
 from django.http import JsonResponse, HttpResponse
-from cffex_uda import  get_uda
-from cffex_uda.utils import tokenization, raw_data_utils
+from ssf_uda import  get_uda
+from ssf_uda.utils import tokenization, raw_data_utils
 from conf import *
 
 

@@ -1,6 +1,6 @@
 # coding=utf-8
-from cffex_uda import  get_uda
-from cffex_uda.utils import tokenization, raw_data_utils
+from ssf_uda import  get_uda
+from ssf_uda.utils import tokenization, raw_data_utils
 from  conf import *
 import pandas as pd
 import json
@@ -54,7 +54,7 @@ def get_multitags_uda(conf_list):
 def multitags_eval():
     conf_list = [conf_tag0, conf_tag1,conf_tag2,conf_tag3,conf_tag4]
     model_list, labels_map = get_multitags_uda(conf_list)
-    eval = read_csv('cffex_uda/data/CFFEX/multitags', 'multitags_uda.csv')
+    eval = read_csv('ssf_uda/data/CFFEX/multitags', 'multitags_uda.csv')
     for i in range(len(eval)):
         content = eval.iloc[i]['content']
         labels_uda = json.loads(eval.iloc[i]['predict'])
