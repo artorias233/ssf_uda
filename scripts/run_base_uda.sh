@@ -25,22 +25,22 @@ UNSUP_FILE="unsup.csv"
 LABELS=0,1,2,3,4
 #TASK_NAME=cffextheme
 
-python cffex_uda/main.py \
+python ssf_uda/main.py \
   --use_tpu=False \
   --do_train=True \
   --do_eval=True \
   --labels=${LABELS} \
-  --raw_data_dir=cffex_uda/data/$FILE/$SUB_FILE \
+  --raw_data_dir=ssf_uda/data/$FILE/$SUB_FILE \
   --sup_train_file=${SUP_TRAIN_FILE} \
   --sup_dev_file=${SUP_DEV_FILE} \
   --unsup_file=${UNSUP_FILE} \
-  --sup_train_data_dir=cffex_uda/data/proc_data/$FILE/$SUB_FILE/train_${SUP_SIZE}_${MAX_SEQ_LENGTH} \
-  --unsup_data_dir=cffex_uda/data/proc_data/$FILE/$SUB_FILE/unsup_${MAX_SEQ_LENGTH} \
-  --eval_data_dir=cffex_uda/data/proc_data/$FILE/$SUB_FILE/dev_${MAX_SEQ_LENGTH} \
-  --bert_config_file=cffex_uda/pretrained_models/albert_base/albert_config.json \
-  --vocab_file=cffex_uda/pretrained_models/albert_base/vocab_chinese.txt \
-  --init_checkpoint=cffex_uda/pretrained_models/albert_base/model.ckpt-best \
-  --model_dir=cffex_uda/ckpt/base_uda/${SUB_FILE}_${SUP_SIZE}_${MAX_SEQ_LENGTH}_${TAG} \
+  --sup_train_data_dir=ssf_uda/data/proc_data/$FILE/$SUB_FILE/train_${SUP_SIZE}_${MAX_SEQ_LENGTH} \
+  --unsup_data_dir=ssf_uda/data/proc_data/$FILE/$SUB_FILE/unsup_${MAX_SEQ_LENGTH} \
+  --eval_data_dir=ssf_uda/data/proc_data/$FILE/$SUB_FILE/dev_${MAX_SEQ_LENGTH} \
+  --bert_config_file=ssf_uda/pretrained_models/albert_base/albert_config.json \
+  --vocab_file=ssf_uda/pretrained_models/albert_base/vocab_chinese.txt \
+  --init_checkpoint=ssf_uda/pretrained_models/albert_base/model.ckpt-best \
+  --model_dir=ssf_uda/ckpt/base_uda/${SUB_FILE}_${SUP_SIZE}_${MAX_SEQ_LENGTH}_${TAG} \
   --num_train_steps=5000 \
   --learning_rate=2e-05 \
   --num_warmup_steps=1000 \

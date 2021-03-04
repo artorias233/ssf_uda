@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #!/bin/bash
-bert_vocab_file=cffex_uda/pretrained_models/albert_base/vocab_chinese.txt
+bert_vocab_file=ssf_uda/pretrained_models/albert_base/vocab_chinese.txt
 
 FILE=CFFEX
 SUB_FILE=illegal
@@ -36,14 +36,14 @@ SUP_SIZE=60
 
 # Preprocess supervised training set
 echo "处理有监督数据"
-python cffex_uda/preprocess.py \
-  --raw_data_dir=cffex_uda/data/$FILE/$SUB_FILE \
+python ssf_uda/preprocess.py \
+  --raw_data_dir=ssf_uda/data/$FILE/$SUB_FILE \
   --labels=${LABELS} \
   --trunc_keep_right=False\
   --sup_train_file=${SUP_TRAIN_FILE} \
   --sup_dev_file=${SUP_DEV_FILE} \
   --unsup_file=${UNSUP_FILE} \
-  --output_base_dir=cffex_uda/data/proc_data/$FILE/$SUB_FILE/train_${SUP_SIZE}_${MAX_SEQ_LENGTH} \
+  --output_base_dir=ssf_uda/data/proc_data/$FILE/$SUB_FILE/train_${SUP_SIZE}_${MAX_SEQ_LENGTH} \
   --data_type=sup \
   --sub_set=train \
   --sup_size=$SUP_SIZE \
@@ -54,14 +54,14 @@ python cffex_uda/preprocess.py \
 #
 # Preprocess test set
 echo "处理验证集"
-python cffex_uda/preprocess.py \
-  --raw_data_dir=cffex_uda/data/$FILE/$SUB_FILE \
+python ssf_uda/preprocess.py \
+  --raw_data_dir=ssf_uda/data/$FILE/$SUB_FILE \
   --labels=${LABELS} \
   --trunc_keep_right=False\
   --sup_train_file=${SUP_TRAIN_FILE} \
   --sup_dev_file=${SUP_DEV_FILE} \
   --unsup_file=${UNSUP_FILE} \
-  --output_base_dir=cffex_uda/data/proc_data/$FILE/$SUB_FILE/dev_${MAX_SEQ_LENGTH} \
+  --output_base_dir=ssf_uda/data/proc_data/$FILE/$SUB_FILE/dev_${MAX_SEQ_LENGTH} \
   --data_type=sup \
   --sub_set=dev \
   --vocab_file=$bert_vocab_file \
@@ -72,15 +72,15 @@ python cffex_uda/preprocess.py \
 
 ## Preprocess unlabeled set
 #echo "处理无监督数据"
-#python cffex_uda/preprocess.py \
-#  --raw_data_dir=cffex_uda/data/$FILE/$SUB_FILE \
+#python ssf_uda/preprocess.py \
+#  --raw_data_dir=ssf_uda/data/$FILE/$SUB_FILE \
 #  --labels=${LABELS} \
 #  --trunc_keep_right=False\
 #  --sup_train_file=${SUP_TRAIN_FILE} \
 #  --sup_dev_file=${SUP_DEV_FILE} \
 #  --unsup_file=${UNSUP_FILE} \
-#  --output_base_dir=cffex_uda/data/proc_data/$FILE/$SUB_FILE/unsup_${MAX_SEQ_LENGTH} \
-#  --back_translation_dir=cffex_uda/data/back_translation/$FILE_back_trans \
+#  --output_base_dir=ssf_uda/data/proc_data/$FILE/$SUB_FILE/unsup_${MAX_SEQ_LENGTH} \
+#  --back_translation_dir=ssf_uda/data/back_translation/$FILE_back_trans \
 #  --data_type=unsup \
 #  --sub_set=unsup_in \
 #  --aug_ops=tf_idf-0.2 \
